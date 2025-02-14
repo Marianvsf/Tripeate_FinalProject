@@ -1,80 +1,43 @@
-# WebApp boilerplate with React JS and Flask API
+# Tripeate Viajes de FullDay with React JS and Flask API
 
-Build web applications using React.js for the front end and python/flask for your backend API.
+## Descripción
 
-- Documentation can be found here: https://start.4geeksacademy.com/starters/react-flask
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to heroku [in just a few steps here](https://start.4geeksacademy.com/backend/deploy-heroku-posgres).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+"Tripeate" es una plataforma web dinámica diseñada para revolucionar la forma en que las personas exploran y disfrutan de experiencias de viaje únicas. Con un enfoque en viajes de un día y la conexión entre viajeros y anfitriones locales, esta aplicación ofrece una manera intuitiva y personalizada de descubrir destinos y actividades emocionantes. Desarrollada con tecnologías de vanguardia como JavaScript, Python, React, Flask, HTML, CSS, Cloudinary, Bootstrap y Node.js, "Tripeate" facilita la creación, búsqueda, reserva y disfrute de experiencias de viaje inolvidables.
 
-### 1) Installation:
+## Tecnologías utilizadas:
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
+- Frontend: JavaScript, React, HTML, CSS, Bootstrap, Cloudinary.
+- Backend: Python, Flask, Node.js.
+- Base de datos: PostgreSQL (SQLAlchemy).
+- Sistema de pagos: PayPal.
 
-It is recomended to install the backend first, make sure you have Python 3.8, Pipenv and a database engine (Posgress recomended)
+## Características principales
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
+-Conexión entre viajeros y anfitriones: Facilita el encuentro entre viajeros que buscan experiencias únicas y anfitriones locales dispuestos a compartirlas.
+- Registro y gestión de perfiles: Permite a los usuarios registrarse, crear perfiles personalizados y gestionar sus viajes y experiencias.
+- Búsqueda y reserva de experiencias: Ofrece herramientas de búsqueda intuitivas para encontrar experiencias de viaje únicas y la posibilidad de reservarlas de forma segura.
+- Creación y publicación de viajes: Permite a los anfitriones crear y publicar sus propios viajes, incluyendo detalles, fotos y precios.
+- Sistema de pagos seguro: Integra PayPal para garantizar transacciones seguras y confiables.
+- Interfaz de usuario interactiva: Desarrollada con React y Flask para una experiencia de usuario fluida y dinámica.
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+## Responsabilidades y logros:
 
-### Undo a migration
+- Desarrollo de la plataforma web: Creación de una plataforma integral que simplifica la conexión entre viajeros y anfitriones, desde el registro hasta la reserva y el pago.
+- Implementación de funcionalidades clave: Desarrollo de características esenciales como la búsqueda y reserva de experiencias, la creación y publicación de viajes, y la gestión de perfiles de usuario.
+- Integración de sistema de pagos: Implementación de PayPal para garantizar transacciones seguras y confiables.
+- Uso de tecnologías de vanguardia: Aplicación de React, Flask, HTML, CSS, JavaScript, Cloudinary, Bootstrap y Node.js para crear una plataforma moderna y escalable.
 
-You are also able to undo a migration by running
+## Interfaz del Usuario
 
-```sh
-$ pipenv run downgrade
-```
+- Página de inicio: Muestra viajes destacados, recomendaciones personalizadas y opciones de búsqueda.
+- Página de búsqueda: Permite a los usuarios buscar experiencias por destino, fecha, precio y otros criterios.
+- Página de detalles del viaje: Muestra información detallada sobre un viaje específico, incluyendo fotos, descripción, itinerario y precios.
+- Página de perfil del usuario: Permite a los usuarios gestionar sus viajes, reservas y perfil personal.
+- Proceso de reserva: Guía a los usuarios a través del proceso de reserva de forma clara y sencilla.
 
-### Backend Populate Table Users
-
-To insert test users in the database execute the following command:
-
-```sh
-$ flask insert-test-users 5
-```
-
-And you will see the following message:
-
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
-
-### **Important note for the database and the data inside it**
-
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
-
-### Front-End Manual Installation:
-
--   Make sure you are using node version 14+ and that you have already successfully installed and runned the backend.
-
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
-
-## Publish your website!
-
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://start.4geeksacademy.com/deploy).
-
-### Contributors
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+## Desarrollo
+- Frontend (React, HTML, CSS, JavaScript, Bootstrap): Creación de una interfaz de usuario interactiva y receptiva.
+- Backend (Python, Flask, Node.js): Desarrollo de la lógica de la aplicación, gestión de la base de datos y procesamiento de pagos.
+- Cloudinary: Almacenamiento y gestión de imágenes de viajes.
+- PayPal: Integración del sistema de pagos para transacciones seguras.
