@@ -1,3 +1,12 @@
+![image](https://github.com/user-attachments/assets/784b9783-5637-435a-a63a-92a4a11e91d5)
+
+![image](https://github.com/user-attachments/assets/db4f0f14-801e-4081-be81-7aad20ab2fc1)
+
+![image](https://github.com/user-attachments/assets/052bf9ee-e3a8-4104-81a3-ddd5369c9e8c)
+
+
+
+
 # Tripeate Viajes de FullDay with React JS and Flask API
 
 ## Descripción
